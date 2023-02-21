@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Es6 Practice Problem</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.50.2/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body{
+            background-image: url(./images/bg.jpg);
+            background-size: 100%;
+            height: 100vh;
+            background-repeat: no-repeat;
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+        <div class="container-fluid px-8 mx-auto bg-grey">
+            <div class="flex justify-between py-3 my-3">
+                <div>
+                    <h3 class="font-bold text-3xl text-tertiary">Javascript ES-6</h3>
+                    <p class="text-2xl text-secondary">Problem Solving</p>
+                </div>
+                <div>
+                    <a href="index.html" class="btn bg-blue text-white my-3 px-8">Day-1</a>
+                    <a href="day2.html" class="btn bg-blue text-white my-3 px-8">Day-2</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="px-8">
+          <div class="container py-5 flex flex-col md:flex-col lg:flex-row lg:justify-between gap-5">
+            <div  class="card-details w-100 md:w-full lg:w-[65%] grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 md:justify-between md:gap-6 lg:gap-6">
+              <!-- Practice Problem -->
+              <!-- Problem-1 -->
+              <div class="card w-full bg-base-100 shadow mb-5  lg:mb-10" onmouseenter="changeColor(this)">
+                <h3 id="day2-title-problem1" class="text-center text-2xl font-bold text-primary mt-6">Problem-1</h3>
+                <div class="card-body items-center text-center">
+                  <div class="">
+                    <input id="day2-first-problem-input" type="text" placeholder="give number separated by comma" class="border ml-4 rounded-md mr-2 p-2">
+                  </div>
+                  <div class="card-actions py-5">
+                    <button id="btn-day2-problem-1" class="btn bg-blue text-white px-28 md:px-18 lg:px-20 border-0">Calculate</button>
+                  </div>
+                </div>
+              </div>
+              <!-- Problem 1-(b) -->
+              <div class="card w-full bg-base-100 shadow mb-5  lg:mb-10" onmouseenter="changeColor(this)">
+                <h3 id="title-problem2" class="text-center text-2xl font-bold text-primary mt-6">Problem-1(b)</h3>
+                <div class="card-body items-center text-center">
+                  <div class="">
+                    <input id="first-input-problem-2" type="text" placeholder="1st sentence" class="border ml-4 rounded-md mr-2 p-2">
+                    <input id="second-input-problem-2" type="text" placeholder="2nd sentence" class="ml-4 border rounded-md mr-2 p-2 my-3">
+                    <input id="third-input-problem-2" type="text" placeholder="3rd sentence" class="ml-4 border rounded-md mr-2 p-2">
+                  </div>
+                  <div class="card-actions py-5">
+                    <button id="btn-problem2" class="btn bg-blue text-white px-28 md:px-18 lg:px-20 border-0">Post</button>
+                  </div>
+                </div>
+              </div>
+              <!-- Problem 1(c) -->
+              <div class="card w-full bg-base-100 shadow mb-5  lg:mb-10" onmouseenter="changeColor(this)">
+                <h3 id="title-problem3" class="text-center text-2xl font-bold text-primary mt-6">Problem-1(c)</h3>
+                <div class="card-body items-center text-center">
+                  <div class="">
+                    <input id="first-input-problem-3" type="number" placeholder="give any number" class="border ml-4 rounded-md mr-2 p-2">
+                  <div class="card-actions py-5">
+                    <button id="btn-problem3" class="btn bg-blue text-white px-28 md:px-18 lg:px-20 border-0">Calculate</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Problem-2 -->
+            <div class="card w-full bg-base-100 shadow mb-5  lg:mb-10" onmouseenter="changeColor(this)">
+              <h3 id="title-second-problem" class="text-center text-2xl font-bold text-primary mt-6">Problem-2</h3>
+              <div class="card-body items-center text-center">
+                <div class="">
+                  <input id="second-problem-input" type="text" placeholder="friend's names separated by comma" class="border rounded-md p-2 text-xs w-full">
+                <div class="card-actions py-5">
+                  <button id="btn-second-problem" class="btn bg-blue text-white px-28 md:px-18 lg:px-12 border-0">Even Length Name</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Problem-3 -->
+          <div class="card w-full bg-base-100 shadow mb-5  lg:mb-10" onmouseenter="changeColor(this)">
+            <h3 id="title-third-problem" class="text-center text-2xl font-bold text-primary mt-6">Problem-3</h3>
+            <div class="card-body items-center text-center">
+              <div class="">
+                <input id="third-problem-input" type="text" placeholder="give number separated by comma" class="border rounded-md p-2 text-xs w-full">
+              <div class="card-actions py-5">
+                <button id="btn-third-problem" class="btn bg-blue text-white px-28 md:px-18 lg:px-12 border-0">Calculate Sum</button>
+              </div>
+            </div>
+          </div>
+        </div>
+          <!-- Problem-4 -->
+          <div class="card w-full bg-base-100 shadow mb-5  lg:mb-10" onmouseenter="changeColor(this)">
+            <h3 id="title-fourth-problem" class="text-center text-2xl font-bold text-primary mt-6">Problem-4</h3>
+            <div class="card-body items-center text-center">
+              <div class="">
+                <input id="fourth-problem-first-input" type="text" placeholder="give number separated by comma" class="border rounded-md p-2 text-xs w-full">
+
+                <input id="fourth-problem-second-input" type="text" placeholder="give number separated by comma" class="border rounded-md p-2 text-xs w-full mt-3">
+              <div class="card-actions py-5">
+                <button id="btn-fourth-problem" class="btn bg-blue text-white px-28 md:px-18 lg:px-12 border-0">Find Max Number</button>
+              </div>
+            </div>
+          </div>
+        </div>
+            </div>
+            <div class="calculation-area w-full md:w-full lg:w-[35%]">
+              <div class="card w-full bg-base-100 shadow">
+                <h1 class="text-3xl text-center font-bold underline mt-5 ">Show Output</h1>
+                <div class="card-body items-center text-center">
+                  <div class="overflow-x-auto">
+                    <table class="table w-full">
+                      <tbody id="table-container">
+                        
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+          </div>
+        </section>
+        <section>
+          <div id="text-container" class="grid grid-cols-4 gap-6">
+            
+          </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="common.js"></script>
+    <script src="day2/js/problem1.js"></script>
+    <script src="day2/js/problem2.js"></script>
+    <script src="day2/js/problem3.js"></script>
+    <script src="day2/js/problem4.js"></script>
+  </body>
+</html>
