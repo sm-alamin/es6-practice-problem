@@ -7,7 +7,9 @@
 // Print the result.
 
 //function declaration
-const checkEvenFriendsName = (friends) => {
+const checkEvenFriendsName = () => {
+    const stringInput = document.getElementById('second-problem-input').value;
+    const friends = stringInput.split(",");
     let newFriendList =[];
     for (const friend of friends) {
         if (friend.length % 2 === 0) {
@@ -16,7 +18,14 @@ const checkEvenFriendsName = (friends) => {
     }
     return newFriendList;
 }
-//calling the function
-const friends = ["Jakir", "Abdullah Al Mamun", "Jubayer", "Masdudur Rahman", "Riad Ahmed Apu", 'Jamia', "Rasel", "Jami"];
-const newList = checkEvenFriendsName(friends);
-console.log(newList);
+
+document.getElementById('btn-second-problem').addEventListener('click', function(){
+    index += 1;
+    const title = document.getElementById('title-second-problem').innerText;
+    const checkEvenFriend = checkEvenFriendsName();
+   
+    // function calling
+   const result = checkEvenFriend.join(",");
+   displayCalculation(title, result);
+
+})

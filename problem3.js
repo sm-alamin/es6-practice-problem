@@ -6,7 +6,9 @@
 // Print the result.
 
 //function declaration
-const averageOfSquaredNumbers = (numbers) => {
+const averageOfSquaredNumbers = () => {
+    const numberInput = document.getElementById('third-problem-input').value;
+    const numbers = numberInput.split(",");
     let sum = 0;
     let average = 0;
     for (const number of numbers) {
@@ -16,7 +18,14 @@ const averageOfSquaredNumbers = (numbers) => {
     }
     return average;
 }
-//calling the function
-const numbers = [2, 4, 5];
-const averageNumbers = averageOfSquaredNumbers(numbers);
-console.log(averageNumbers);
+
+document.getElementById('btn-third-problem').addEventListener('click', function(){
+    index += 1;
+    const title = document.getElementById('title-third-problem').innerText;
+    const averageNumber = averageOfSquaredNumbers();
+   
+    // function calling
+   const result =averageNumber.toFixed(2);
+   displayCalculation(title, result);
+
+})

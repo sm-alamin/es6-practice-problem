@@ -13,6 +13,19 @@ const findMaxNumber = (input1, input2) => {
     return findMax;
 
 }
+document.getElementById('btn-fourth-problem').addEventListener('click', function(){
+    index += 1;
+    const title = document.getElementById('title-fourth-problem').innerText;
+    const firstInput = document.getElementById('fourth-problem-first-input').value;
+    const secondInput = document.getElementById('fourth-problem-second-input').value;
+    
+    const firstInputSplit = firstInput.split(",");
+    const secondInputSplit = secondInput.split(",");
+    // function calling
+    const result = findMaxNumber(firstInputSplit, secondInputSplit);
+   displayCalculation(title, result);
+
+})
 //calling the function
 const numbers1 = [2, 4, 7, 5];
 const numbers2 = [1, 3, 16, 13];
